@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::-webkit-scrollbar{
+  width: 8px;
+  background-color: #0E1135;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #fff;
+  border-radius: 10px;
+}
+.container{
+  max-width:1358px !important;
+  @apply  w-screen h-full  ;
+}
+.navbar{
+  @apply   text-white flex justify-between pl-20 pr-16 pb-8 pt-6;
+}
+.btn{
+  @apply px-8 transition ease-in-out delay-150 rounded-3xl py-2 ml-4 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 
+}
+.header{
+  @apply  pt-16 pl-20 pr-10 flex ;
+}
+.menu{
+  @apply flex pl-20 pr-16 text-[18px] items-center font-medium;
+}
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-br from-[#69BCEA] via-[#EACCF8] to-[#6654F1] font-bold 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn1{
+  @apply text-[20px] text-white font-medium h-[50px] w-[170px]  rounded-full border-[1px] border-white hover:-translate-y-1 hover:scale-110 hover:bg-[#6654F1];
+}
+.monkey-img{
+  @apply w-[450px] h-[480px] justify-items-center -skew-y-12 origin-top-left rotate-12 rounded-2xl absolute right-[150px] 
+}
+.background-border{
+  @apply border-[2px] border-[#FFFFFF]/10 bg-[#FFFFFF]/5  -skew-y-12 origin-top-left rotate-12 rounded-2xl absolute 
+}
+.background-border6{
+  @apply border-[2px] border-[#FFFFFF]/10 bg-[#FFFFFF]/5  -skew-y-12 origin-top-left rotate-12 rounded-2xl absolute  
+}
+.wallet{
+  max-width:1358px !important;
+  @apply  flex flex-col  pt-16 pb-4
+}
+.wallet_support{
+  @apply  flex items-center justify-center flex-row  flex-wrap 
+}
+.wallet_text{
+  @apply  text-white text-[30px] ml-[16px] flex flex-col font-medium w-[250px]
+}
+.wallet_items{
+  @apply w-1/4 flex flex-row items-center justify-center py-[16px]
+}
+.frame{
+  max-width:1358px !important;
+  @apply  flex  w-screen h-[1125px] focus:touch-pan-x flex-col py-[140px] justify-between
+}
+.card-list{
+  @apply m-4 flex 
+}
+.card {
+  @apply w-[343px] h-[535px] border-[1px] flex rounded-3xl border-[#67EACB] flex-col justify-between p-4 align-top
+}
+.collect_btn {
+  @apply w-[301px] h-[55px] bg-[#2F80ED] rounded-full text-white  font-medium hover:-translate-y-1 hover:scale-y-110 hover:bg-indigo-500 
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.see_button{
+  @apply border-white border-[1px] rounded-full  text-white py-[10px] px-[55px] text-[20px] transition
+  delay-150 hover:-translate-y-1 hover:scale-110
+}
+.collection{
+  max-width:1358px !important;
+  @apply  flex w-screen h-full items-center flex-col
+}
+.collection_list{
+  @apply flex gap-x-4 py-4
+}
+.collection_button{
+  @apply text-[18px] text-white px-[58px] py-[7px] border-white border-[1px] rounded-full text-center
+}
+.collection_button1{
+  @apply text-[20px] bg-[#2F80ED] text-white px-[62px] py-[10px] rounded-full text-center
+}
+.top_collection{
+  @apply grid grid-cols-4 pt-12
+}
+.card-list-collection{
+  @apply m-2 flex 
+}
+.card-collection {
+  @apply w-[290px] h-[410px] border-[1px] flex rounded-3xl border-[#FFFFFF]/20 flex-col justify-between p-4 align-top bg-[#FFFFFF]/5
+}
+.categories{
+  max-width:1358px !important;
+  @apply  flex w-screen h-full items-center flex-col py-40 px-4 
+}
+.categories-list{
+  @apply w-[430px] h-[388px] border-[1px] flex rounded-2xl border-[#FFFFFF]/20  bg-[#FFFFFF]/10 flex-col
+}
+.card-categories{
+  @apply flex flex-row m-4
+}
+.card-image{
+  @apply flex flex-col rounded-full
+}
+.create_sell{
+  max-width:1358px !important;
+  @apply flex w-screen h-full items-center flex-col  px-20 ;
+}
+.create_box{
+  @apply border-[1px] w-full border-[#FFFFFF]/20  bg-[#FFFFFF]/5 h-[430px] pt-8 pb-16 rounded-2xl ;
+}
+.create_box_items_list{
+  @apply flex items-center text-justify justify-between
+}
+.create_box_items{
+  @apply flex justify-between flex-col px-8 items-center
+}
+.create_box_items_title{
+  @apply text-white font-semibold text-[20px]
+}
+.create_box_items_text{
+  @apply text-[#FFFFFF]/50 text-[16px] px-8 text-center
+}
+.article{
+  max-width:1358px !important;
+  @apply flex w-screen h-full items-center flex-col px-20 py-40;
+}
+.article_card{
+  @apply flex flex-col border-[1px] rounded-3xl  border-[#FFFFFF]/20  bg-[#FFFFFF]/5 w-[390px]
+}
+.app{
+  @apply flex w-screen h-full items-center flex-col px-20 py-40
+}
+.footer{
+  max-width:1358px !important;
+  @apply flex w-screen h-full justify-center  px-20 flex-col bg-[#0E1135] pb-10;
+}
+.input{
+  @apply bg-[#FFFFFF] rounded-full h-[66px] w-[700px] flex items-center  mt-10 mx-[245px] mb-16
+}
+.footer-icons{
+@apply w-[40px]  h-[30px] text-[#FFFFFF]/70;
 }

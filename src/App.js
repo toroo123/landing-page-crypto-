@@ -1,24 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Articles from './components/Articles';
+import Categories from './components/Categories';
+import Collection from './components/Collection';
+import CreateSell from './components/CreateSell';
+import Header from './components/Header';
+import Trending from './components/Trending';
+import Walletupport from './components/WalletSupport';
+import bg from '../src/images/BACKGROUND.png'
+import bg1 from '../src/images/back.png'
+import Footer from './components/Footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div >
+        <div className='main' style={{background:`url(${bg1})`}}>
+        
+        </div>
+        <div className='container' style={{background:`url(${bg})`}}>
+          <Header/>
+          <Walletupport/>
+          <Trending/>
+          <Collection/>
+          <Categories/>
+          <CreateSell/>
+          <Articles/>
+          <Footer/>
+        </div>
+      </div>
+    </>
   );
 }
 
